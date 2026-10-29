@@ -170,11 +170,21 @@ table.ficha{width:100%;border-collapse:collapse;font-size:23px;margin-top:6px}
 
 
 /* cita e intertextualidad */
-.grades .g{display:grid;grid-template-columns:190px 1fr;gap:22px;padding:18px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.grades .g{display:grid;grid-template-columns:160px 1fr;gap:22px;padding:11px 0;border-bottom:1px solid var(--line);align-items:baseline}
 .grades .g:first-child{padding-top:0}
-.grades h3{font-size:38px;font-style:italic}
-.grades p{font-size:25px;line-height:1.35}
-.grades p .ej{display:block;color:var(--muted);font-size:20px;margin-top:4px}
+.grades h3{font-size:32px;font-style:italic}
+.grades p{font-size:22px;line-height:1.3}
+.grades p .ej{display:block;color:var(--muted);font-size:18px;margin-top:2px}
+
+.chain{display:grid;grid-template-columns:1fr auto 1fr auto 1fr auto 1fr;align-items:stretch;gap:12px}
+.chain .node{border:1px solid var(--line);padding:14px 18px;display:flex;flex-direction:column;gap:2px}
+.chain .node.v{border-color:rgba(124,200,162,.55)} .chain .node.o{border-color:rgba(229,138,92,.55)}
+.chain .y{font-family:var(--serif);font-size:20px;color:var(--muted)}
+.chain b{font-family:var(--serif);font-style:italic;font-weight:600;font-size:27px;line-height:1.15}
+.chain .node.v b{color:var(--v)} .chain .node.o b{color:var(--o)}
+.chain .a{font-size:16px;color:var(--muted)}
+.chain .link{align-self:center;text-align:center;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.chain .link i{display:block;font-style:normal;font-size:30px;line-height:1;color:var(--ink)}
 
 /* ---------- interfaz ---------- */
 #ui{position:fixed;inset:auto 0 0 0;height:56px;display:flex;align-items:center;justify-content:space-between;padding:0 18px;z-index:10;opacity:0;transition:opacity .3s}
@@ -634,20 +644,29 @@ body.show-ui #ui{opacity:1}
 <section class="slide">
   <p class="kicker rise">Antes de la pregunta</p>
   <h2 class="rise d1">La cita y la intertextualidad</h2>
-  <p class="lead rise d1">Toda obra dialoga con otras que la preceden. En el cine, la cita es la forma más visible de ese diálogo.</p>
-  <div class="cols" style="grid-template-columns:1fr 1fr;gap:72px">
+  <p class="lead rise d1" style="margin-bottom:18px">Toda obra dialoga con otras que la preceden. Obsesión es el último eslabón de una cadena de reescrituras.</p>
+  <div class="chain rise d1">
+    <div class="node"><span class="y">1892</span><b>Brujas, la muerta</b><span class="a">Georges Rodenbach</span></div>
+    <div class="link">reescribe<i>→</i></div>
+    <div class="node"><span class="y">1954</span><b>Entre los muertos</b><span class="a">Boileau y Narcejac</span></div>
+    <div class="link">adapta<i>→</i></div>
+    <div class="node v"><span class="y">1958</span><b>Vértigo</b><span class="a">Alfred Hitchcock</span></div>
+    <div class="link">reescribe<i>→</i></div>
+    <div class="node o"><span class="y">1976</span><b>Obsesión</b><span class="a">Brian De Palma</span></div>
+  </div>
+  <div class="cols" style="grid-template-columns:1fr 1fr;gap:72px;margin-top:26px">
     <div class="grades rise d2">
       <div class="g"><h3>Visual</h3><p>Se reconoce de inmediato.<span class="ej">El zoom con travelling</span></p></div>
       <div class="g"><h3>Sonora</h3><p>Se reconoce antes de entender qué pasa.<span class="ej">La música de Herrmann</span></p></div>
       <div class="g"><h3>De color</h3><p>Sin peso en la trama: un guiño de fanático.<span class="ej">Las perlas de Elizabeth</span></p></div>
     </div>
     <div class="rise d3" style="display:flex;flex-direction:column;justify-content:center">
-      <div class="quote-box o" style="font-size:36px;line-height:1.28">Obsesión es un homenaje que se sabe homenaje.</div>
+      <div class="quote-box o" style="font-size:32px;line-height:1.28">Obsesión es un homenaje que se sabe homenaje.</div>
       <p style="margin-top:28px">El espectador que reconoce a <span class="hl-v">Vértigo</span> ve cómo Michael repite, sin saberlo, una escena que el cine ya contó.</p>
     </div>
   </div>
   <p class="takeaway rise d4">¿Cuándo una cita es homenaje y cuándo es copia?</p>
-  <aside class="notes"><p>Antes de evaluar, un marco breve: toda obra dialoga con otras anteriores, y en el cine la cita es la forma más visible de ese diálogo.</p><p>A lo largo del trabajo encontramos distintos tipos de cita en Obsesión: visuales, como el zoom con travelling, que quien vio Vértigo reconoce de inmediato; sonoras, como la música de Herrmann, que se reconoce antes de entender qué está pasando; y citas de color, como las perlas de Elizabeth, sin peso en la trama, un guiño de fanático.</p><p>Obsesión es un homenaje que se sabe homenaje: el espectador que reconoce Vértigo ve cómo Michael repite sin saberlo una escena que el cine ya contó. La pregunta es cuándo esas citas funcionan como homenaje y cuándo como copia.</p></aside>
+  <aside class="notes"><p>Antes de evaluar, un marco breve: toda obra dialoga con otras anteriores. Obsesión es una reescritura de Vértigo, y la novela en la que se basa Vértigo, Entre los muertos (D'entre les morts, 1954) de Pierre Boileau y Thomas Narcejac, es a su vez una reescritura de Brujas, la muerta (1892) de Georges Rodenbach.</p><p>A lo largo del trabajo encontramos distintos tipos de cita en Obsesión: visuales, como el zoom con travelling, que quien vio Vértigo reconoce de inmediato; sonoras, como la música de Herrmann, que se reconoce antes de entender qué está pasando; y citas de color, como las perlas de Elizabeth, sin peso en la trama, un guiño de fanático.</p><p>Obsesión es un homenaje que se sabe homenaje: el espectador que reconoce Vértigo ve cómo Michael repite sin saberlo una escena que el cine ya contó. La pregunta es cuándo esas citas funcionan como homenaje y cuándo como copia.</p></aside>
 </section>
 
 <!-- 23 · SECCIÓN III -->
@@ -755,7 +774,9 @@ body.show-ui #ui{opacity:1}
       <ul class="clean">
         <li>Barr, C. (2002). <i>Vertigo</i>. BFI Film Classics. British Film Institute.</li>
         <li>Canby, V. (1976, 2 de agosto). <i>Screen: ‘Obsession’: Mystery film by Brian De Palma at Coronet</i>. The New York Times.</li>
-                <li><i>Obsession (1976 film)</i>. Wikipedia.</li>
+                <li>Boileau, P. y Narcejac, T. (1954). <i>Entre los muertos</i> [D'entre les morts].</li>
+        <li>Rodenbach, G. (1892). <i>Brujas, la muerta</i> [Bruges-la-Morte].</li>
+        <li><i>Obsession (1976 film)</i>. Wikipedia.</li>
       </ul>
       <p class="small muted" style="margin-top:40px">Faletti · Sanz · Tello · Romero · Corradin · Maidana</p>
     </div>
